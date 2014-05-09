@@ -16,6 +16,7 @@ namespace ExemploDevmedia.Controllers
 
         public ClienteController()
         {
+
             clienteRepositorio = RepositorioFactory.InstanciarRepositorio();
         }
 
