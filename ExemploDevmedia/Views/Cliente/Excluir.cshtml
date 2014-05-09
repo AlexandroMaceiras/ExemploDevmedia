@@ -1,0 +1,21 @@
+﻿@model ExemploDevmedia.Models.Cliente
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Alterar</h2>
+@using (@Html.BeginForm("Excluir","Cliente")) 
+{
+    @Html.HiddenFor(cli => cli.Id)
+    <div class="editor-label">
+        @Html.LabelFor(cli => cli.Nome):  @Html.DisplayFor(cli => cli.Nome)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(cli => cli.Idade):  @Html.DisplayFor(cli => cli.Idade)
+    </div>
+    <p>
+        <input type="submit" value="Excluir" /></p>
+}
+<!-- "Excluir","Cliente" não são necessários no BeginForm, só use se o action Excluir da ClienteController.cs
+tiver outro nome diferente da sua view Excluir -->

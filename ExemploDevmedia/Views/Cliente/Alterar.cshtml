@@ -1,0 +1,31 @@
+﻿@model ExemploDevmedia.Models.Cliente
+@{
+    ViewBag.Title = "Alterar";
+}
+<h2>
+    Alterar</h2>
+@using (@Html.BeginForm())
+{
+    <p>
+        @Html.ValidationSummary(true)
+    </p>
+    
+    <!-- Usando A@rroba Html.DisplayForModel() tudo o que está embaixo até o input
+    é desnecessário -->
+    
+    @Html.HiddenFor(cli => cli.Id)
+    <div class="editor-label">
+        @Html.LabelFor(cli => cli.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(cli => cli.Nome) @Html.ValidationMessageFor(cli => cli.Nome)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(cli => cli.Idade)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(cli => cli.Idade) @Html.ValidationMessageFor(cli => cli.Idade)
+    </div>
+    <p>
+        <input type="submit" value="Alterar" /></p>
+}
