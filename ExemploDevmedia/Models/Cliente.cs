@@ -18,7 +18,7 @@ namespace ExemploDevmedia.Models
         [Required(ErrorMessage = "Nome é obrigatório")]
         public string Nome { get; set; }
         [Required(ErrorMessage = "Idade é obrigatório")]
-        public int Idade { get; set; }
+        public int Idade { get; set; } 
 
         public override bool Equals(object obj)
         {
